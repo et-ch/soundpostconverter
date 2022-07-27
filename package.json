@@ -1,0 +1,23 @@
+{
+  "name": "soundpostconverter",
+  "version": "1.0.0",
+  "description": "Converts soundposts to video with sound.",
+  "main": "soundpost converter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "soundpostconverter.js"
+  },
+  "keywords": [],
+  "author": "etch",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "download": "^8.0.0",
+    "express": "^4.18.1",
+    "ffmpeg.js": "^4.2.9003",
+    "fluent-ffmpeg": "^2.1.2",
+    "https": "^1.0.0",
+    "node": "^18.5.0",
+    "ytdl-core": "^4.11.0"
+  }
+}
