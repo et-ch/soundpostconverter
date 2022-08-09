@@ -15,7 +15,7 @@ let keepOriginalAudio = false;
 let keepOgg = false; //set as true if original audio is .ogg and you want to keep it
 let keepMp4 = true; //recommended to keep as true in case sound source is mp4, as it converts to webm badly.
 let outputFolder = "files"; //leave blank if you want it to output to the current directory (not recommended)
-let validAudioFileTypes = [".m4a", ".aac", ".wma", ".wav", ".mp4", ".flac", ".mp3"];
+let validAudioFileTypes = [".m4a", ".aac", ".wma", ".wav", ".mp4", ".flac", ".mp3", ".opus"];
 let useSubfolders = false; //recommended to set to true if keepOriginalAudio is set to true. set to false if converting large amounts of files at once.
 
 //////////////////////////////////////////////
@@ -182,8 +182,7 @@ function soundpostConvert(soundpost) {
         }
     
         function isOtherAudioFile(soundName) {
-            const ext = path.extname(soundName);
-            return ext === ".m4a" | ext === ".aac" | ext === ".wma" | ext === ".wav" | ext === ".mp4" | ext === ".flac" | ext === ".mp3";
+            return validAudioFileTypes.includes(soundFileType);
         }
 
         function isWebm(soundName) {
